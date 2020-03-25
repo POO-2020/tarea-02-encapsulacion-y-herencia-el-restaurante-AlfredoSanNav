@@ -5,21 +5,21 @@ export default class Tiempo {
    * @param {number} minuto
    * @param {string} periodo
    */
-  constructor({ hora, minuto, periodo }) {
-    this.hora = hora;
-    this.minuto = minuto;
-    this.periodo = periodo.toUpperCase();
+  constructor( hora, minuto, periodo ) {
+    this._hora = hora;
+    this._minuto = minuto;
+    this._periodo = periodo.toUpperCase();
   }
 
   getFormato12() {
-    return `${this.hora}:${this.minuto} ${this.periodo}`;
+    return `${this._hora}:${this._minuto} ${this._periodo}`;
   }
 
   getFormato24() {
     if (this.periodo === 'AM') {
-      return `${this.hora}:${this.minuto}`;
+      return `${this._hora}:${this._minuto}`;
     } else {
-      return `${this.hora + 12}:${this.minuto}`;
+      return `${this._hora + 12}:${this._minuto}`;
     }
   }
 }

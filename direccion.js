@@ -27,12 +27,12 @@ export default class Direccion {
   }
 
   getFormatoCorto() {
-    let direccion = `${this.calle} ${this.numeroExterior}`;
+    let direccion = `${this._calle} ${this._numeroExterior}`;
 
     return direccion;
   }
 
   getFormatoExtendido() {
-    return ` ${this.calle} ${this.numeroExterior},${this.numeroInterior} ${this.colonia} CP.${this.codigoPostal} ${this.ciudad}, ${this.municipio}`;
+    return ` ${this._calle} ${this._numeroExterior},${this._numeroInterior} ${this._colonia} CP.${this._codigoPostal} ${this._ciudad}, ${this._municipio}`;
   }
 }
