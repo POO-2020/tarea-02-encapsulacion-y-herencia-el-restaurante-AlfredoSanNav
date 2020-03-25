@@ -7,6 +7,15 @@ import Fecha from './fecha.js';
 import Tiempo from './tiempo.js';
 import Cliente from './cliente.js';
 import Direccion from './direccion.js';
+import ClienteFrecuente from './clienteFrecuente.js';
+
+var clienteFrecuenteDatos = {
+  nombre: "Gerardo Díaz",
+  direccion: "Tecoman #256",
+  telefono: 3124568956,
+  numeroCliente: 1255625,
+  fechaRegistro: new Fecha(25, 1, 2019)
+}
 
 class Main {
   constructor() {
@@ -23,6 +32,7 @@ class Main {
       28040,
       'Colima',
       'Colima'
+      
     );
 
     this.precio = new Precio(2500.5);
@@ -38,6 +48,8 @@ class Main {
     this.pedido.agregarElemento(this.elemento);
     this.pedido.agregarElemento(this.elemento2);
     this.pedido.agregarElemento(this.elemento3);
+
+    
   }
 
   probarFecha() {
@@ -84,6 +96,10 @@ class Main {
     console.log(this.pedido.getCostoTotal());
     this.pedido.listarElementos();
   }
+  probarClienteFrecuente(){
+    let cf1 = new ClienteFrecuente(clienteFrecuenteDatos)
+    console.log(cf1.getPerfil())
+  }
 }
 
 let app = new Main();
@@ -96,3 +112,4 @@ app.probarProducto();
 app.probarElementoPedido();
 app.probarCliente();
 app.probarPedido();
+app.probarClienteFrecuente();

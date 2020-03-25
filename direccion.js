@@ -16,15 +16,14 @@ export default class Direccion {
     colonia,
     codigoPostal,
     ciudad,
-    municipio
-  ) {
-    this.calle = calle;
-    this.numeroExterior = numeroExterior;
-    this.numeroInterior = numeroInterior;
-    this.colonia = colonia;
-    this.codigoPostal = codigoPostal;
-    this.ciudad = ciudad;
-    this.municipio = municipio;
+    municipio) {
+    this._calle = calle;
+    this._numeroExterior = numeroExterior;
+    this._numeroInterior = numeroInterior;
+    this._colonia = colonia;
+    this._codigoPostal = codigoPostal;
+    this._ciudad = ciudad;
+    this._municipio = municipio;
   }
 
   getFormatoCorto() {
