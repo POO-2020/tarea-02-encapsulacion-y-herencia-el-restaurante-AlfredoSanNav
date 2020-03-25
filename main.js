@@ -16,6 +16,12 @@ var clienteFrecuenteDatos = {
   numeroCliente: 1255625,
   fechaRegistro: new Fecha(25, 1, 2019)
 }
+var datosPedido1 = {
+  fecha: new Fecha(19,2,2020),
+  hora: new Tiempo(22,10),
+  cliente: new Cliente("Elmo",new Direccion("Falsa",123,0,"Malavista",28984,"Colima","Colima"),3123027485),
+  numeroPedido: 1
+};
 
 class Main {
   constructor() {
@@ -44,13 +50,10 @@ class Main {
 
     this.cliente = new Cliente('Juan Pérez Díaz', this.direccion, 3124563256);
 
-    this.pedido = new Pedido(this.fecha, this.tiempo1, this.cliente);
-    this.pedido.agregarElemento(this.elemento);
-    this.pedido.agregarElemento(this.elemento2);
-    this.pedido.agregarElemento(this.elemento3);
-
-    
+    this.pedido = new Pedido(datosPedido1);
+           
   }
+  /*
 
   probarFecha() {
     console.log(this.fecha.getAños());
@@ -88,7 +91,7 @@ class Main {
   probarElementoPedido() {
     console.log(this.elemento.getDescripcion());
   }
-
+*/
   probarPedido() {
     console.log(this.pedido.getResumen());
     console.log(this.pedido.getNumeroElementos());
@@ -96,6 +99,7 @@ class Main {
     console.log(this.pedido.getCostoTotal());
     this.pedido.listarElementos();
   }
+  
   probarClienteFrecuente(){
     let cf1 = new ClienteFrecuente(clienteFrecuenteDatos)
     console.log(cf1.getPerfil())
@@ -103,7 +107,7 @@ class Main {
 }
 
 let app = new Main();
-
+/*
 app.probarFecha();
 app.probarTiempo();
 app.probarDireccion();
@@ -111,5 +115,6 @@ app.probarPrecio();
 app.probarProducto();
 app.probarElementoPedido();
 app.probarCliente();
+*/
 app.probarPedido();
 app.probarClienteFrecuente();
